@@ -10,7 +10,7 @@ def main():
     path_in = "/home/lameeus/Pictures/elephant.jpg"
     im = plt.imread(path_in)/255
     
-    scale = .2
+    scale = 1   # .2
     im = rescale(im, scale)
     
     h, w, _ = im.shape
@@ -98,6 +98,8 @@ def main():
     plt.figure()
     plt.imshow(im_alias)
     plt.show()
+    
+    plt.imsave("/scratch/Downloads_local/triangles",im_triangle, vmin=0, vmax=1)
     
     return 1
 
